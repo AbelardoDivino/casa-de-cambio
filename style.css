@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    border: 1px solid lightslategray;
+}
+
+header h1{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    color: red;
+}
+
+#opcao-de{
+
+    align-items: center;
+    width: 250px;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+#opcao-para{
+    
+        width: 250px;
+    height: auto;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+#res{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+margin: 20px;
+}
