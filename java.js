@@ -1,8 +1,8 @@
-let botao = document.getElementById('enviar')
-let valorInput = document.getElementById('valor')
-let moedaDe = document.getElementById('moeda')
-let moedaPara = document.getElementById('moedar')
-let resultado = document.getElementById('res')
+let valorInput = document.getElementById("valor");
+let moedaDe = document.getElementById("moedaDe");
+let moedaPara = document.getElementById("moedaPara");
+let enviar = document.getElementById("enviar");
+let resultado = document.getElementById("res");
 
 const taxas = {
     BRL: 1,
@@ -25,23 +25,23 @@ const taxas = {
     OMR: 0.074,
     BHD: 0.073,
     KWD: 0.059
-}
+};
 
-botao.addEventListener('click', function () {
-
-    let valor = Number(valorInput.value)
-    let de = moedaDe.value
-    let para = moedaPara.value
+enviar.addEventListener("click", function () {
+    let valor = Number(valorInput.value);
+    let de = moedaDe.value;
+    let para = moedaPara.value;
 
     if (valor <= 0 || isNaN(valor)) {
-        resultado.innerHTML = '<p>Valor inválido</p>'
-        return
+        resultado.innerHTML = "Digite um valor válido!";
+        return;
     }
 
-    let valorEmReal = valor * taxas[de]
-    let valorConvertido = valorEmReal / taxas[para]
+    // converter para BRL
+    let emBRL = valor / taxas[de];
 
-    resultado.innerHTML = `
-        <p>${valor} ${de} = ${valorConvertido.toFixed(2)} ${para}</p>
-    `
-})
+    // converter para moeda destino
+    let convertido = emBRL * taxas[para];
+
+    resultado.innerHTML = `${valor} ${de} = ${convertido.toFixed(2)} ${para}`;
+});

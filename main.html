@@ -9,47 +9,20 @@
 <body>
 
     <header>
-        <h1> casa de cambio</h1>
+        <h1>Casa de Cambio</h1>
     </header>
 
-    <main class="container">
+    <section class="container">
 
-        <section id="opcao-de">
-          
+        <div id="opcao-de">
 
-            <!-- 
-            
-            Calculadora simples
-            Conversor de temperatura
-            Verificador de idade
-            Calculadora de IMC
-            Sistema de notas escolares
-            Conversor de unidades
-            Simulador de caixa eletrônico
-            Lista de tarefas (To-Do List)
-            Sistema de login fake
-            -->
+            <label for="moeda">Escolha o cambio para converter</label>
+            <p>Escolha a moeda para converter</p>
+            <input type="number" id="valor">
+            <button id="enviar">Converter</button>
+            <select name="moeda" id="moedaDe">
 
-            <!-- Casa de câmbio 2.0
-
-Mas agora com:
-
-API real
-
-Formatação monetária
-
-Mensagens de erro amigáveis
-
-Layout organizado -->
-
-            <label for="Moeda">Escolha o cambio para converter</label>
-
-                <p>Escolha a moeda para converter</p>
-                <input type="number" id="valor">
-               <button id="enviar">Converter</button>
-            <select name="moeda" id="moeda">
-                
-                <option value="BRL">BRL</option>
+                    <option value="BRL">BRL</option>
                 <option value="FJD">FJD</option>
                 <option value="BGN">BGN</option>
                 <option value="NZD">NZD</option>
@@ -69,58 +42,55 @@ Layout organizado -->
                 <option value="OMR">OMR</option>
                 <option value="BHD">BHD</option>
                 <option value="KWD">KWD</option>
-                
+
+            </select>
+        </div>
+
+        <div id="opcao-para">
+
+            <p>Moeda convertida</p>
+
+            <select name="moeda" id="moedaPara">
+
+                    <option value="BRL">BRL</option>
+                <option value="FJD">FJD</option>
+                <option value="BGN">BGN</option>
+                <option value="NZD">NZD</option>
+                <option value="AUD">AUD</option>
+                <option value="BND">BND</option>
+                <option value="SGD">SGD</option>
+                <option value="CAD">CAD</option>
+                <option value="BMD">BMD</option>
+                <option value="PAB">PAB</option>
+                <option value="BSD">BSD</option>
+                <option value="USD">USD</option>
+                <option value="CHF">CHF</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="KYD">KYD</option>
+                <option value="JOD">JOD</option>
+                <option value="OMR">OMR</option>
+                <option value="BHD">BHD</option>
+                <option value="KWD">KWD</option>
+
             </select>
 
 
-        </section>
 
+        </div>
 
-        
+    </section>
 
-        <section id="opcao-para">
-            
-                <p>Moeda que serar convertida</p>
-        
- <select name="moeda" id="moedar">
-    <option value="BRL">BRL</option>
-    <option value="FJD">FJD</option>
-    <option value="BGN">BGN</option>
-    <option value="NZD">NZD</option>
-    <option value="AUD">AUD</option>
-    <option value="BND">BND</option>
-    <option value="SGD">SGD</option>
-    <option value="CAD">CAD</option>
-    <option value="BMD">BMD</option>
-    <option value="PAB">PAB</option>
-    <option value="BSD">BSD</option>
-    <option value="USD">USD</option>
-    <option value="CHF">CHF</option>
-    <option value="EUR">EUR</option>
-    <option value="GBP">GBP</option>
-    <option value="KYD">KYD</option>
-    <option value="JOD">JOD</option>
-    <option value="OMR">OMR</option>
-    <option value="BHD">BHD</option>
-    <option value="KWD">KWD</option>
-    
-            </select>
-
-
-        </section>
-
-            
     <div id="res">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quasi accusantium ab ea provident tempora amet minus a sunt natus! Distinctio quam ut ullam quasi necessitatibus nihil sit natus sequi.</p>
-    </div> 
-    </main>
-    
-
+        <p>Escolha o valor para o resultado</p>
+    </div>
 
     <footer>
-
+        <p>&copy; Criado por Abelardo</p>
     </footer>
 
+
     <script src="java.js"></script>
+    
 </body>
 </html>

@@ -1,53 +1,105 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    text-align: justify;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
-.container{
-    width: 100%;
-    height: auto;
-    border: 1px solid lightslategray;
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    flex-direction: column;
+    color: white;
 }
 
-header{
-    background-color: lightslategray;
-    height: 45px;
-    width: auto;
-}
-
-header h1{
-    margin: 10px;
-    padding: 10px;
+/* Cabeçalho */
+header {
     text-align: center;
-    color: darkblue;
+    padding: 20px;
+    font-size: 1.5rem;
 }
 
-#opcao-de{
-
-    align-items: center;
-    width: 250px;
-    height: auto;
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid black;
+/* Caixa principal */
+.container {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
-#opcao-para{
-    
-    width: 250px;
-    height: auto;
-    border: 1px solid black;
-    margin: 10px;
-    padding: 10px;
+/* Cada lado (de / para) */
+#opcao-de, #opcao-para {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-#res{
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 20px;
-margin: 20px;
+/* Inputs */
+input, select, button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+/* Input e select */
+input, select {
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+/* Deixar opções legíveis */
+option {
+    color: black;
+}
+
+/* Botão */
+button {
+    background: #00c6ff;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #00c6ff;
+}
+
+/* Resultado */
+#res {
+    margin: 30px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 15px;
+    opacity: 0.7;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
 }
